@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(npm install *)",
+      "Bash(npx concurrently *)",
+      "Bash(npm run *)",
+      "Bash(winget search *)",
+      "Bash(winget install *)",
+      "Bash(npm --version)",
+      "Bash(ls node_modules/lightningcss/)",
+      "Bash(ls node_modules/lightningcss/*.node)",
+      "Bash(ls node_modules/lightningcss/node/)",
+      "Bash(ls node_modules/@tailwindcss/oxide/)",
+      "Bash(taskkill /F /IM \"node.exe\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr :8080)",
+      "Bash(taskkill /F /PID 103108)",
+      "Bash(findstr LISTENING)",
+      "Bash(taskkill *)",
+      "Bash(\"C:/Program Files/PostgreSQL/17/bin/pg_isready\" -h localhost)",
+      "Bash(\"C:/Program Files/PostgreSQL/17/bin/createdb\" -U postgres fullstack_dev)",
+      "Bash(grep -v \"^$\")",
+      "Bash(PGPASSWORD=postgres C:/Program Files/PostgreSQL/17/bin/psql *)",
+      "Bash(PGPASSWORD=postgres C:/Program Files/PostgreSQL/17/bin/createdb *)",
+      "Bash(findstr \":8080\")",
+      "Bash(findstr \":3000\")",
+      "Bash(curl -s http://localhost:3000/api/plans?date=2026-06-17)",
+      "Bash(gh --version)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git config *)",
+      "Bash(git ls-remote *)",
+      "Bash(gh auth *)"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ai_generate_diary_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.17",
+  "name": "AI生成日记",
+  "description": "将对话内容整理为一篇包含标题和正文的结构化日记文本，流式输出。",
+  "icon": "",
+  "paramsSchema": {
+    "properties": {
+      "chat_content": {
+        "type": "string",
+        "description": "需要整理为日记的聊天对话内容"
+      }
+    },
+    "required": [
+      "chat_content"
+    ],
+    "type": "object"
+  },
+  "formValue": {
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位专业的日记整理专家，擅长将日常对话内容转化为结构清晰、情感真挚的日记。\n\n请根据以下聊天内容生成一篇完整的日记：\n聊天内容：{{input.chat_content}}\n\n日记要求：\n1. 标题：简洁明了，能够概括当天的核心内容或主题，10-20字\n2. 正文：\n   - 自然流畅，以第一人称视角叙述\n   - 包含日期（如果聊天内容中有明确时间请体现，没有则省略）\n   - 保留对话中的关键事件、感受和思考\n   - 段落清晰，逻辑连贯，符合日常日记的书写风格\n   - 字数300-800字\n3. 整体风格：真实自然，情感真挚，避免过于正式或生硬的表达\n\n输出时直接返回日记内容，无需额外说明。",
+    "modelID": "87"
+  },
+  "createdAt": 1781514522834,
+  "updatedAt": 1781514522834,
+  "createdBy": 7651535205215325380
+}

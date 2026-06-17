@@ -1,0 +1,35 @@
+{
+  "id": "personal_growth_ai_assistant_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.17",
+  "name": "个人成长AI对话助手",
+  "description": "作为个人成长助手，与用户进行多轮对话交流，提供专业建议和正向引导，支持流式输出。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "conversation_history": {
+        "type": "string",
+        "description": "之前的对话历史上下文，用于保持多轮对话的连贯性"
+      },
+      "user_question": {
+        "type": "string",
+        "description": "用户提出的问题或表达的需求"
+      }
+    },
+    "required": [
+      "user_question"
+    ]
+  },
+  "formValue": {
+    "modelID": "87",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位专业的个人成长助手，拥有丰富的心理学、职业发展、学习方法和生活管理方面的知识。请以温暖、耐心、鼓励的态度与用户交流。\n\n对话历史：\n{{input.conversation_history}}\n\n用户当前问题：{{input.user_question}}\n\n回答要求：\n1. 基于对话历史保持上下文连贯性，避免重复回答已经讨论过的内容\n2. 先充分理解用户的核心需求，提供有针对性、可落地的建议\n3. 语言通俗易懂，避免使用过于专业或晦涩的术语\n4. 保持积极正向的引导，给予用户鼓励和支持\n5. 对于复杂问题可以分点阐述，结构清晰\n6. 如果用户的问题超出你的知识范围，坦诚告知并提供可行的建议方向\n7. 回答长度根据问题复杂度灵活调整，确保信息完整同时避免冗余"
+  },
+  "createdAt": 1781514524850,
+  "updatedAt": 1781514524850,
+  "createdBy": 7651535205215325380
+}

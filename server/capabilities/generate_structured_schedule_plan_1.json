@@ -1,0 +1,48 @@
+{
+  "id": "generate_structured_schedule_plan_1",
+  "pluginKey": "@official-plugins/ai-text-to-json",
+  "pluginVersion": "1.0.23",
+  "name": "AI生成结构化计划插件",
+  "description": "从对话上下文提取信息生成包含标题、时间、日期的结构化计划数据，用于一键保存到数据库。",
+  "icon": "",
+  "paramsSchema": {
+    "properties": {
+      "conversation_context": {
+        "description": "包含计划信息的对话上下文文本",
+        "type": "string"
+      }
+    },
+    "required": [
+      "conversation_context"
+    ],
+    "type": "object"
+  },
+  "formValue": {
+    "jsonStructure": [
+      {
+        "name": "title",
+        "paramType": "String",
+        "paramDescription": "计划标题，字符串类型"
+      },
+      {
+        "name": "scheduledTime",
+        "paramType": "String",
+        "paramDescription": "计划时间，格式为HH:MM，如09:00"
+      },
+      {
+        "name": "date",
+        "paramType": "String",
+        "paramDescription": "计划日期，格式为YYYY-MM-DD，如2026-06-15"
+      }
+    ],
+    "modelID": "87",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位专业的计划信息提取专家，请从以下对话上下文内容中准确提取计划相关信息。\n\n对话上下文内容：\n{{input.conversation_context}}\n\n提取规则：\n1. 计划标题(title)：提取明确的计划主题或名称，未找到则填空字符串\n2. 计划时间(scheduledTime)：提取格式为HH:MM的时间，如09:00、14:30，未找到则填空字符串\n3. 计划日期(date)：提取格式为YYYY-MM-DD的日期，如2026-06-15，未找到则填空字符串\n\n请严格按照指定的JSON结构输出结果，确保字段格式符合要求。"
+  },
+  "createdAt": 1781514526584,
+  "updatedAt": 1781514526584,
+  "createdBy": 7651535205215325380
+}
