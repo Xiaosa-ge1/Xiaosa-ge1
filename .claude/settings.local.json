@@ -31,7 +31,14 @@
       "Bash(git add *)",
       "Bash(git config *)",
       "Bash(git ls-remote *)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(where gh *)",
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(git *)",
+      "Bash(curl *)"
     ]
   }
 }
